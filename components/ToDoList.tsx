@@ -1,19 +1,31 @@
+import { useSelector, useDispatch } from 'react-redux'
+
+import { State } from '../store'
+import { actions as todoActions } from '../store/todo'
+
 import styles from '../styles/ToDoList.module.css'
 
 const ToDoList = () => {
-  const todos = [
-    'hoge',
-    'fuga',
-    'hoga',
-    'fuge'
-  ]
+  const dispatch = useDispatch()
+  const todos = useSelector((state: State) => state.todo.list)
+
+  const { check } = todoActions
+
   return (
     <div className={styles.container}>
-      {todos.map((todo, i) => (
-        <div key={i}>
-          <label htmlFor={`${i}`}>
-            <input type='checkbox' name={`${i}`} />
-            {todo}
+      {todos.map(todo => (
+        <div key={todo.id}>
+          <label htmlFor={todo.id}>
+            <input
+              checked={todo.checked}
+              name={todo.id}
+              onChange={() => dispatch(check({
+                id: todo.id,
+                checked: !todo.checked
+              }))}
+              type='checkbox'
+            />
+            {todo.text}
           </label>
         </div>
       ))}
