@@ -1,6 +1,6 @@
 import styles from '../styles/ToDoList.module.css'
 
-export default function ToDoList () {
+const ToDoList = () => {
   const todos = [
     'hoge',
     'fuga',
@@ -20,3 +20,5 @@ export default function ToDoList () {
     </div>
   )
 }
+
+export default ToDoList

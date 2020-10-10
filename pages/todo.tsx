@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/ToDo.module.css'
+import styles from '../styles/ToDoPage.module.css'
 
 import ToDoList from '../components/ToDoList'
 
-export default function ToDo () {
+const ToDoPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,3 +21,5 @@ export default function ToDo () {
     </div>
   )
 }
+
+export default ToDoPage
