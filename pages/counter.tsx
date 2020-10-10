@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/CounterPage.module.css'
 
-export default function Home () {
+import Counter from '../components/Counter'
+
+const CounterPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Home</title>
+        <title>Counter</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
-        <Link href='/counter'>counter &gt;</Link>
-        <Link href='/todo'>todo &gt;</Link>
+        <Counter />
       </main>
 
       <footer className={styles.footer}>
@@ -21,3 +21,5 @@ export default function Home () {
     </div>
   )
 }
+
+export default CounterPage
