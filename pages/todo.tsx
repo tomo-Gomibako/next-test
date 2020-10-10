@@ -8,7 +8,7 @@ const ToDoPage = () => {
     <div className={styles.container}>
       <Head>
         <title>ToDo</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link href='/favicon.ico' rel='icon' />
       </Head>
 
       <main className={styles.main}>

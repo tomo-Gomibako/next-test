@@ -8,7 +8,7 @@ const CounterPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Counter</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link href='/favicon.ico' rel='icon' />
       </Head>
 
       <main className={styles.main}>

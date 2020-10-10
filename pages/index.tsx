@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className={styles.container}>
       <Head>
         <title>Home</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link href='/favicon.ico' rel='icon' />
       </Head>
 
       <main className={styles.main}>
