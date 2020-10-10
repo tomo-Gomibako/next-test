@@ -24,7 +24,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
-    }]
+    }],
+    'react/jsx-sort-props': 'error'
   },
   settings: {
     react: {
