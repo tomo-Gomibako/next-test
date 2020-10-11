@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { State } from '@/store'
 import { actions as todoActions } from '@/store/todo'

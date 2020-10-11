@@ -21,6 +21,13 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    'sort-imports': ['error', {
+      ignoreCase: false,
+      ignoreDeclarationSort: true,
+      ignoreMemberSort: false,
+      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      allowSeparatedGroups: false
+    }],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
