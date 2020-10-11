@@ -1,7 +1,7 @@
 import { createSlice, combineReducers, PayloadAction } from '@reduxjs/toolkit'
 
 export interface ToDoItem {
-  id: string | null
+  id?: string
   text: string
   checked: boolean
 }
