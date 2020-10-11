@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/ToDoPage.module.css'
+import styles from '@/styles/ToDoPage.module.css'
 
-import ToDoList from '../components/ToDoList'
+import ToDoList from '@/components/ToDoList'
 
 const ToDoPage = () => {
   return (

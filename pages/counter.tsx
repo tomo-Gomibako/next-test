@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/CounterPage.module.css'
+import styles from '@/styles/CounterPage.module.css'
 
-import Counter from '../components/Counter'
+import Counter from '@/components/Counter'
 
 const CounterPage = () => {
   return (

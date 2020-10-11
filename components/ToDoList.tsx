@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
 
-import { State } from '../store'
-import { actions as todoActions } from '../store/todo'
+import { State } from '@/store'
+import { actions as todoActions } from '@/store/todo'
 
-import styles from '../styles/ToDoList.module.css'
+import styles from '@/styles/ToDoList.module.css'
 
 const ToDoList = () => {
   const dispatch = useDispatch()
