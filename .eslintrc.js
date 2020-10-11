@@ -29,6 +29,7 @@ module.exports = {
       allowSeparatedGroups: false
     }],
     'arrow-parens': ['error', 'always'],
+    'require-await': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
