@@ -1,4 +1,4 @@
-import { createSlice, combineReducers, PayloadAction } from '@reduxjs/toolkit'
+import { PayloadAction, combineReducers, createSlice } from '@reduxjs/toolkit'
 
 export interface ToDoItem {
   id?: string
@@ -12,7 +12,7 @@ const addItem = (todos: ToDoItem[], newItem: ToDoItem) => {
   if (!newItem.id) {
     while (true) {
       const id = idGenerator()
-      if (!todos.filter(item => item.id === id).length) {
+      if (!todos.filter((item) => item.id === id).length) {
         newItem.id = id
         break
       }
@@ -50,11 +50,11 @@ const slice = createSlice({
       return ret
     },
     add: (state, action: PayloadAction<ToDoItem>) => addItem(state, action.payload),
-    delete: (state, action: PayloadAction<string>) => state.filter(item => item.id !== action.payload),
+    delete: (state, action: PayloadAction<string>) => state.filter((item) => item.id !== action.payload),
     check: (state, action: PayloadAction<{
       id: string,
       checked: boolean
-    }>) => state.map(item => item.id === action.payload.id ? {
+    }>) => state.map((item) => item.id === action.payload.id ? {
       ...item,
       checked: action.payload.checked
     } : item)

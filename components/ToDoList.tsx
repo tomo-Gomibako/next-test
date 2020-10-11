@@ -13,14 +13,14 @@ const ToDoList = () => {
 
   return (
     <div className={styles.container}>
-      {todos.map(todo => (
+      {todos.map((todo) => (
         <div key={todo.id}>
           <label htmlFor={todo.id}>
             <input
               checked={todo.checked}
               name={todo.id}
               onChange={() => dispatch(check({
-                id: todo.id,
+                id: todo.id ?? '_',
                 checked: !todo.checked
               }))}
               type='checkbox'

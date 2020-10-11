@@ -28,6 +28,7 @@ module.exports = {
       memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
       allowSeparatedGroups: false
     }],
+    'arrow-parens': ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
