@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
+import Default from '@/layouts/default'
+
 import styles from '@/styles/HomePage.module.css'
 
 const HomePage = () => {
@@ -11,8 +14,14 @@ const HomePage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Link href='/counter'>counter &gt;</Link>
-        <Link href='/todo'>todo &gt;</Link>
+        <Default>
+          <div>
+            <Link href='/counter'>counter &gt;</Link>
+          </div>
+          <div>
+            <Link href='/todo'>todo &gt;</Link>
+          </div>
+        </Default>
       </main>
 
       <footer className={styles.footer}>

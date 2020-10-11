@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
+import authReducer from './auth'
 import counterReducer from './counter'
 import todoReducer from './todo'
 
 const store = configureStore({
   reducer: {
+    auth: authReducer,
     counter: counterReducer,
     todo: todoReducer
   }
