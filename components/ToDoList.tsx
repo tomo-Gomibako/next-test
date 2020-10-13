@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { State } from '@/store'
 import { actions as todoActions } from '@/store/todo'
 
+import classNames from 'classnames'
 import styles from '@/styles/ToDoList.module.css'
 
 const ToDoList = () => {
@@ -25,7 +26,12 @@ const ToDoList = () => {
               }))}
               type='checkbox'
             />
-            {todo.text}
+            <span className={classNames({
+              [styles.done]: todo.checked
+            })}
+            >
+              {todo.text}
+            </span>
           </label>
         </div>
       ))}
